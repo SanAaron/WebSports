@@ -1,43 +1,50 @@
+<div class="ae-grid au-xs-ta-center au-mb-4 animated fadeIn">
 
-  <div class="ae-grid au-xs-ta-center au-mb-4">
-    <div class="ae-grid__item item-lg-4 ae-kappa au-mb-3"><img src="assets/img/team-1.jpg" alt="" class="au-mb-3">
-      <h5 class="ae-u-bolder au-mt-2">Aaron Sanabria</h5>
-      <p class="ae-u-bolder au-mb-3">Fundador</p>
-      <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">"Las medellas de Oro no estan hechas realmente de oro. Estan hechas de sudor, determinacion y algo muy dificil de encotrar llamado agallas".</p><a href="#0" class="ae-u-bolder au-underline">@sabariaAaron</a>
-    </div>
-    <div class="ae-grid__item item-lg-4 ae-kappa au-mb-3"><img src="assets/img/team-2.jpg" alt="" class="au-mb-3">
-      <h5 class="ae-u-bolder au-mt-2">Manuel Bonnabel</h5>
-      <p class="ae-u-bolder au-mb-3">Founder / CEO</p>
-      <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">"No puedes ponerle un limite a nada. Mientras mas sueñas, mas lejos llegas".</p><a href="#0" class="ae-u-bolder au-underline">@BonnabelManuel</a>
-    </div>
-    <div class="ae-grid__item item-lg-4 ae-kappa au-mb-3"><img src="assets/img/team-3.jpg" alt="" class="au-mb-3">
-      <h5 class="ae-u-bolder au-mt-2">Emilio Muñoz</h5>
-      <p class="ae-u-bolder au-mb-3">Director General</p>
-      <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">"Sigue corriendo, no dejes que tus excusas te alcancen".</p><a href="#0" class="ae-u-bolder au-underline">@MuñozEmilio</a>
-    </div>
+  <div *ngFor="let miembro of _is.equipo" 
+      class="ae-grid__item item-lg-4 ae-kappa au-mb-3">
+    <img [src]="miembro.url" alt="" class="au-mb-3">
+    <h5 class="ae-u-bolder au-mt-2">{{miembro.nombre}}</h5>
+    <p class="ae-u-bolder au-mb-3">{{miembro.subtitulo}}</p>
+    <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">{{miembro.frase}}</p>
+    <a href="https://twitter.com/{{miembro.twitter}}" target="blank" class="ae-u-bolder au-underline">{{miembro.twitter}}</a>
   </div>
-  <div class="ae-grid au-pt-2">
-    <div class="ae-grid__item item-lg-8 item-lg--offset-2">
-      <h4 class="ae-u-bolder">Title example</h4>
-      <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
-    </div>
+
+ 
+
+<div class="ae-grid au-pt-2">
+  <div class="ae-grid__item item-lg-8 item-lg--offset-2">
+    <h4 class="ae-u-bolder">Title example</h4>
+    <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
   </div>
-  <div class="ae-grid ae-grid--alt au-xs-ptp-1">
-    <div class="ae-grid__item--alt item-lg-4">
-      <h6 class="ae-u-boldest">Mision</h6>
-      <p class="au-lh-3">Comercializar ropa deportiva a nivel nacional. Y ofrecerles a nuestros clientes las mejores marcas para brindar productos de alta calidad. </p>
-    </div>
-    <div class="ae-grid__item--alt item-lg-4">
-      <h6 class="ae-u-boldest">Vision</h6>
-      <p class="au-lh-3">Nuestra vision es poder llegar a ser en el 2020 una tienda muy reconicida a nivel nacional.</p>
-    </div>
-    <div class="ae-grid__item--alt item-lg-4">
-      <h6 class="ae-u-boldest">Nuestros Clientes</h6>
-      <p class="au-lh-3">Para nosotros nuestros cliente son sumamente importantes, es por eso que les ofrecemos productos de calidad y comodidad para ellos. </p>
-      <!--p class="au-lh-3">Nemo enim ipsam voluptatem quia voluptas</p-->
-    </div>
+</div>
+
+<div class="ae-grid ae-grid--alt au-xs-ptp-1">
+  <div class="ae-grid__item--alt item-lg-4">
+    <h6 class="ae-u-boldest">Mision</h6>
+    <p class="au-lh-3">Comercializar ropa deportiva a nivel nacional. Y ofrecerles a nuestros clientes las mejores marcas para brindar productos
+      de alta calidad. </p>
   </div>
-  <p class="au-flex au-pt-4 group-buttons"><a href="portfolio.html" class="au-mt-4 arrow-button arrow-button--right arrow-button--out">View Our Portfolio<span class="arrow-cont">
-        <svg>
-          <use xlink:href="assets/img/symbols.svg#arrow"></use>
-        </svg></span></a></p>
+
+  <div class="ae-grid__item--alt item-lg-4">
+    <h6 class="ae-u-boldest">Vision</h6>
+    <p class="au-lh-3">Nuestra vision es poder llegar a ser en el 2020 una tienda muy reconicida a nivel nacional.</p>
+  </div>
+
+  <div class="ae-grid__item--alt item-lg-4">
+    <h6 class="ae-u-boldest">Nuestros Clientes</h6>
+    <p class="au-lh-3">Para nosotros nuestros cliente son sumamente importantes, es por eso que les ofrecemos productos de calidad y comodidad
+      para ellos. </p>
+    <!--p class="au-lh-3">Nemo enim ipsam voluptatem quia voluptas</p-->
+  </div>
+</div>
+
+<p class="au-flex au-pt-4 group-buttons">
+  <a href="portfolio.html" class="au-mt-4 arrow-button arrow-button--right arrow-button--out">View Our Portfolio
+    <span class="arrow-cont">
+      <svg>
+        <use xlink:href="assets/img/symbols.svg#arrow"></use>
+      </svg>
+    </span>
+  </a>
+</p>

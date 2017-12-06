@@ -4,14 +4,16 @@ import {
     
     PrincipalComponent,
     AboutComponent,
-    ProductoComponent
+    ProductoComponent,
+    SearchComponent
 } from "./components/index.paginas";
 
 
 const app_routes: Routes = [
     { path: 'home', component: PrincipalComponent },
     { path: 'about', component: AboutComponent },
-    { path: 'producto', component: ProductoComponent },
+    { path: 'producto/:id', component: ProductoComponent },
+    { path: 'search/:termino', component: SearchComponent},
     {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
