@@ -1268,12 +1268,12 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
+  -webkit-box-align: center;
   -webkit-align-items: flex-end;
-  -ms-flex-align: end;
+  -ms-flex-align: center;
           align-items: flex-end;
-  height: 100vh;
-  padding-bottom: 1.5rem;
+  height: 40vh;
+  padding-bottom: 2.5rem;
   width: 100%;
 }
 @media (min-width: 40em) {
@@ -1283,7 +1283,7 @@ body {
 }
 
 .rk-portfolio--inner img {
-  width: 100%;
+  width: 90%;
 }
 
 .rk-portfolio-title {
@@ -1322,7 +1322,7 @@ body {
   text-align: center;
 }
 .item-inside__meta--contrast:before {
-  background-color: rgba(255, 255, 255, .3);
+  background-color: rgba(202, 0, 0, 0.993);
   content: "";
   height: 100%;
   left: 0;
@@ -1361,7 +1361,8 @@ body {
 }
 @media (min-width: 40em) {
   .item-inside-1 {
-    background-size: 150%;
+    /*imagen main size*/
+    background-size: 90%;
   }
 }
 

@@ -3,13 +3,15 @@ import {ActivatedRoute} from "@angular/router";
 
 import {ProductosService} from "../../services/productos.service";
 
+
 @Component({
   selector: 'app-producto',
   templateUrl: './producto.component.html',
   styles: []
 })
 export class ProductoComponent {
-
+ 
+  anio:number = new Date().getFullYear();
   producto:any = undefined;
   cod:string = undefined; 
 
